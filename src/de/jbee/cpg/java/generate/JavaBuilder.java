@@ -9,16 +9,16 @@ import de.jbee.cpg.java.ast.Parameter;
 
 public interface JavaBuilder {
 
-    void buildClass( Class cls );
+	void buildClass( Class cls );
 
-    void buildPackage( Package pack );
+	void buildPackage( Package pack );
 
-    void buildImport( Import imp );
+	void buildImport( Import imp );
 
-    void buildAnnotation( Annotation annotation );
+	void buildAnnotation( Annotation annotation );
 
-    void buildMethod( Method method );
+	void buildMethod( Method method );
 
-    void buildParameter( Parameter parameter );
+	void buildParameter( Parameter parameter );
 
 }

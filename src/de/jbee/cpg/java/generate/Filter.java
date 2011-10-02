@@ -4,5 +4,5 @@ import de.jbee.cpg.java.ast.Node;
 
 public interface Filter<T extends Node> {
 
-    void allows();
+	void allows();
 }

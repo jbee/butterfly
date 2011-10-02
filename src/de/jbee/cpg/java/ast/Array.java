@@ -2,28 +2,29 @@ package de.jbee.cpg.java.ast;
 
 import de.jbee.cpg.write.Writer;
 
-public final class Array implements Type {
+public final class Array
+		implements Type {
 
-    private final Type type;
+	private final Type type;
 
-    public Array( final Type type ) {
-        super();
-        this.type = type;
-    }
+	public Array( final Type type ) {
+		super();
+		this.type = type;
+	}
 
-    @Override
-    public void write( final Writer writer ) {
-        writer.write( type ).write( "[]" );
-    }
+	@Override
+	public void write( final Writer writer ) {
+		writer.write( type ).write( "[]" );
+	}
 
-    @Override
-    public void constructBy( final JavaTreeWalker walker ) {
-        walker.processArray( this );
-    }
+	@Override
+	public void transformWith( final TreeTransformer transformer ) {
+		transformer.processArray( this );
+	}
 
-    //@Override
-    public void constructParts( final JavaTreeWalker walker ) {
-        type.constructBy( walker );
-    }
+	@Override
+	public void transformPartsWith( final TreeTransformer transformer ) {
+		type.transformWith( transformer );
+	}
 
 }

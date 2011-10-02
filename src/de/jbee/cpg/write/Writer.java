@@ -2,26 +2,26 @@ package de.jbee.cpg.write;
 
 public interface Writer {
 
-    Writer write( char c );
+	Writer write( char c );
 
-    Writer write( char[] sequence );
+	Writer write( char[] sequence );
 
-    Writer write( int i );
+	Writer write( int i );
 
-    Writer write( long l );
+	Writer write( long l );
 
-    Writer write( float f );
+	Writer write( float f );
 
-    Writer write( double d );
+	Writer write( double d );
 
-    Writer write( boolean b );
+	Writer write( boolean b );
 
-    Writer write( String s );
+	Writer write( String s );
 
-    Writer write( Writable w );
+	Writer write( Writable w );
 
-    Writer assureWhitespace();
+	Writer assureWhitespace();
 
-    Writer assureNewline();
+	Writer assureNewline();
 
 }

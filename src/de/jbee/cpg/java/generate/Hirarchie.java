@@ -6,9 +6,9 @@ import de.jbee.cpg.java.ast.Node;
 
 public final class Hirarchie {
 
-    private final LinkedList<Node> elementHirachie = new LinkedList<Node>();
+	private final LinkedList<Node> elementHirachie = new LinkedList<Node>();
 
-    public void process() {
+	public void process() {
 
-    }
+	}
 }

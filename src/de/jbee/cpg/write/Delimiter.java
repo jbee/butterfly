@@ -2,29 +2,11 @@ package de.jbee.cpg.write;
 
 public final class Delimiter {
 
-    private static final class CharDelimiter implements Writable {
+	public static final Writable SPACE = Write.character( ' ' );
+	public static final Writable TAB = Write.character( '\t' );
+	public static final Writable LINE_FEED = Write.character( '\n' );
 
-        private final char delimiter;
+	public static final Writable COMMA = Write.character( ',' );
+	public static final Writable SEMI_COLON = Write.character( ';' );
 
-        CharDelimiter( final char delimiter ) {
-            this.delimiter = delimiter;
-        }
-
-        @Override
-        public void write( final Writer writer ) {
-            writer.write( delimiter );
-        }
-
-    }
-
-    public static final Writable SPACE = new CharDelimiter( ' ' );
-    public static final Writable TAB = new CharDelimiter( '\t' );
-    public static final Writable LINE_FEED = new CharDelimiter( '\n' );
-
-    public static final Writable COMMA = new CharDelimiter( ',' );
-    public static final Writable SEMI_COLON = new CharDelimiter( ';' );
-
-    public static Writable character( final char delimiter ) {
-        return new CharDelimiter( delimiter );
-    }
 }
